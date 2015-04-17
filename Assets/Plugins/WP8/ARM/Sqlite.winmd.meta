@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: e26a278a78408c6458e7afb3e9bd5e8e
-timeCreated: 1426852206
-licenseType: Pro
+guid: 4f489ced7bdcf3942822f839c48c20e6
+timeCreated: 1428023355
+licenseType: Free
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -15,13 +15,10 @@ PluginImporter:
     Any:
       enabled: 0
       settings: {}
-    BlackBerry:
-      enabled: 1
-      settings: {}
     Editor:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86
+        CPU: AnyCPU
         DefaultValueInitialized: true
         OS: AnyOS
     Linux:
@@ -31,11 +28,7 @@ PluginImporter:
     Linux64:
       enabled: 0
       settings:
-        CPU: None
-    LinuxUniversal:
-      enabled: 0
-      settings:
-        CPU: x86
+        CPU: x86_64
     OSXIntel:
       enabled: 0
       settings:
@@ -43,26 +36,13 @@ PluginImporter:
     OSXIntel64:
       enabled: 0
       settings:
-        CPU: None
-    OSXUniversal:
-      enabled: 0
-      settings:
-        CPU: x86
-    WP8:
-      enabled: 0
-      settings:
         CPU: AnyCPU
-        DontProcess: False
+    WP8:
+      enabled: 1
+      settings:
+        CPU: ARM
+        DontProcess: True
         PlaceholderPath: 
-    Web:
-      enabled: 1
-      settings: {}
-    WebGL:
-      enabled: 0
-      settings: {}
-    WebStreamed:
-      enabled: 1
-      settings: {}
     Win:
       enabled: 0
       settings:
@@ -70,7 +50,7 @@ PluginImporter:
     Win64:
       enabled: 0
       settings:
-        CPU: None
+        CPU: AnyCPU
     WindowsStoreApps:
       enabled: 0
       settings:

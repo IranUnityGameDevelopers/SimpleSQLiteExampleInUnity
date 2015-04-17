@@ -21,6 +21,8 @@ public class Team  {
 
 	public override string ToString ()
 	{
-		return string.Format ("[Id: Id={0}, Name={1}, Score={2}]", _Id, Name, Score);
+		return string.Format 
+			("[Id: Id={0}, Name={1}, Score={2}]",
+			 _Id, Name, Score);
 	}
 }

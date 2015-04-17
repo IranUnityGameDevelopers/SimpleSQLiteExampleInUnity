@@ -8,17 +8,16 @@ using System.Collections.Generic;
 
 public class DatabaseHandler {
 
-	private ISQLiteConnection _connection;
+	private SQLiteConnection _connection;
 	
 	public DatabaseHandler(string DatabaseName){
-		
-		var factory = new Factory();
 		
 		#if UNITY_EDITOR
 		var dbPath = string.Format(@"Assets/StreamingAssets/{0}", DatabaseName);
 		#else
 		// check if file exists in Application.persistentDataPath
 		var filepath = string.Format("{0}/{1}", Application.persistentDataPath, DatabaseName);
+		
 		if (!File.Exists(filepath))
 		{
 			Debug.Log("Database not in Persistent path");
@@ -50,9 +49,8 @@ public class DatabaseHandler {
 		
 		var dbPath = filepath;
 		#endif
-		_connection = factory.Create(dbPath);
-		Debug.Log("Final PATH: " + dbPath);     
-		
+		_connection = new SQLiteConnection(dbPath, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create);
+		Debug.Log("Final PATH: " + dbPath);         	
 	}
 
 	public void addTeam(Team _team)
